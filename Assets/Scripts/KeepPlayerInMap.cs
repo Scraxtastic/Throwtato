@@ -15,7 +15,7 @@ public class KeepPlayerInMap : MonoBehaviour
         mapPos = mapRenderer.transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, mapPos.x - mapSize.x, mapPos.x + mapSize.x);
