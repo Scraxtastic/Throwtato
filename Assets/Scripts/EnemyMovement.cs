@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -11,16 +13,23 @@ public class EnemyMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    float playerX = 2f;
-    float playerY = 2f;
+    private Vector2 moveDirection;
+    public Rigidbody2D enemy;
     float moveSpeed = 1f;
-    //playerX/Y Variablen sind Platzhalter
-
-
+    GameObject player;
+    private Vector3 playerPos;
+   
+   
     void Update()
     {
-        float xMovement = (playerX - transform.position.x) * Time.deltaTime * moveSpeed;
-        float yMovement = (playerY - transform.position.y) * Time.deltaTime * moveSpeed;
-        transform.Translate(xMovement,yMovement,0);
+        player = GameObject.Find("Player");
+        if(player)
+        {
+            playerPos = player.transform.position;
+        }
+
+        moveDirection.x = (playerPos.x - transform.position.x) * Time.deltaTime * moveSpeed;
+        moveDirection.y = (playerPos.y - transform.position.y) * Time.deltaTime * moveSpeed;
+        enemy.velocity = moveDirection.normalized * moveSpeed;
     }
 }
