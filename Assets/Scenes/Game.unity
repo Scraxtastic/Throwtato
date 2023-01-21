@@ -345,7 +345,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 1484042836}
   - component: {fileID: 1484042838}
   - component: {fileID: 1484042839}
+  - component: {fileID: 1484042840}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -673,6 +674,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapRenderer: {fileID: 1329654612}
+--- !u!114 &1484042840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484042835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e28060523ce9a4c9fe489cfa4cbfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2553189272615963690, guid: 7899d679c8271fa489464f051693f289, type: 3}
+  bulletSpeed: 5
+  bulletLifeTime: 5
+  attackSpeed: 100
+  playerAim: {fileID: 1893020238}
 --- !u!1 &1772333855
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +890,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawAimLine: 0
-  aimLineThickness: 0.1
+  aimLineThickness: 0.01
+  aimDirection: {x: 0, y: 0, z: 0}
+  aimRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!120 &1893020239
 LineRenderer:
   m_ObjectHideFlags: 0
