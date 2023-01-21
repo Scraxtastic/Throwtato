@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150800633}
   - component: {fileID: 150800634}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409222325}
   - component: {fileID: 409222326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469724876}
   - component: {fileID: 1469724877}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 1484042838}
   - component: {fileID: 1484042839}
   - component: {fileID: 1484042840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 1772333858}
   - component: {fileID: 1772333857}
   - component: {fileID: 1772333856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyPrototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 1893020237}
   - component: {fileID: 1893020238}
   - component: {fileID: 1893020239}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunWrapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    /// <summary>
+    /// Kommentare von Nick:
+    /// - Variablen bitte nach oben packen, dass die nicht zwischen Methoden liegen
+    /// - GameObject.Find("Player") bitte ersetzen. Am besten im Spawner als [SerializeField] einbauen oder ggf. static Variable im Enemy Script.
+    /// - beim setzen der moveDirection gibst du die deltaTime und moveSpeed mit. Beim setzen der velocity multiplizierst du nochmal mit dem moveSpeed? :D
+    /// </summary>
 
     // Start is called before the first frame update
     void Start()

@@ -10,15 +10,15 @@ public class Bullet : MonoBehaviour
     [SerializeField] public Vector3 direction;
 
 
+    public const string enemyLayer = "Enemy";
+
     private float movementSpeed = 0;
     private float lifeStartTime;
-    // Start is called before the first frame update
     void Start()
     {
         lifeStartTime = Time.time;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time - lifeStartTime > lifeTime)
@@ -32,5 +32,15 @@ public class Bullet : MonoBehaviour
     {
         transform.position += direction * movementSpeed;
         movementSpeed = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer(enemyLayer))
+        {
+            // TODO Give Enemy health?
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

@@ -11,7 +11,6 @@ public class FollowObject : MonoBehaviour
     [Header("Object to follow")]
     [SerializeField] public Transform objectToFollow;
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 newPosition = transform.position;

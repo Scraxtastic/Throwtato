@@ -17,13 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controls = new PlayerControls();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         float speedToAdd = speed * Time.deltaTime;
@@ -46,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (currentMove.x != 0 && currentMove.y != 0)
         {
-            //prevents 1.41 time speed on diagonal movement
+            //prevents 1.41x speed on diagonal movement
             currentMove.x /= diagonalFactor;
             currentMove.y /= diagonalFactor;
         }
