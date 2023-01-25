@@ -8,9 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] public float speed = 10f;
     [SerializeField] public float lifeTime = 5f;
     [SerializeField] public Vector3 direction;
-
-
-    public const string enemyLayer = "Enemy";
+    [SerializeField] public string layerNameToAttack = "Enemy";
 
     private float movementSpeed = 0;
     private float lifeStartTime;
@@ -37,7 +35,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer(enemyLayer))
+        if (collision.gameObject.layer == LayerMask.NameToLayer(layerNameToAttack))
         {
             // TODO Give Enemy health?
             Destroy(collision.gameObject);
