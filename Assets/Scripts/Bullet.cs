@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
         movementSpeed += speed * Time.deltaTime;
+        transform.Rotate(new Vector3(0, 0, 1));
     }
 
     void FixedUpdate()
